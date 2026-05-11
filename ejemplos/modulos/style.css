@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --button-size: 80px;
+  --margin-size: 10px;
+  --columns: 4;
+  --rows: 5;
+}
+
+main {
+  max-width: calc(var(--button-size) * var(--columns) + var(--margin-size) * (var(--columns) - 1));
+  margin-inline: auto;
+}
+
+ul.history {
+  max-height: 100px;
+  list-style: none;
+  background-color: #bababa;
+  margin-bottom: var(--margin-size);
+  padding: var(--margin-size) 1rem;
+  color: #fff;
+  overflow-y: auto;
+  border-radius: 5px;
+}
+
+ul li {
+  text-align: end;
+  margin-bottom: 0.5rem;
+}
+
+form {
+  grid-template-columns: repeat(4, var(--button-size));
+  grid-template-rows: repeat(5, var(--button-size));
+}
+
+form,
+.operadores {
+  display: grid;
+  gap: var(--margin-size);
+}
+
+#clearAll {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: .5rem;
+}
+
+#result {
+  grid-column: 1/4;
+  text-align: end;
+  padding: 0 1rem;
+  font-size: 2rem;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid rgb(122, 122, 122);
+}
+
+.operadores {
+  grid-column: 4;
+  grid-row: 1/5;
+
+  grid-template-columns: var(--button-size);
+  grid-template-rows: repeat(5, var(--button-size));
+}
+
+.operadores button {
+  background-color: antiquewhite;
+}
+
+.cero {
+  grid-column: 1/3;
+}
+
+button[type="submit"] {
+  background-color: aquamarine;
+}
