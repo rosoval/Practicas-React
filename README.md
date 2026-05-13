@@ -9,6 +9,7 @@ Configurar nuevo gestor de paquetes en reemplazo de `npm` --> [pnpm](./PNPM/READ
 ## Ejemplos
 
 - [Calculadora modular](./ejemplos/modulos/)
+- [Aplicación Node.js con dependencias externas](./ejemplos/node/)
 
 ## Ejercicios
 
